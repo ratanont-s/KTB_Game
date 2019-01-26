@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    padding: 1.5rem 0;
+    @include gradient-y($start-color: #24A4DE, $end-color: darken(#24A4DE, 10%), $start-percent: 0%, $end-percent: 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-logo {
+    width: 50vw;
+    display: block;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.jSlots-wrapper {
+    overflow: hidden;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #999;
+}
+
+.slot {
+    float: left;
+}
