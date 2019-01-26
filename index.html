@@ -25,7 +25,7 @@
                     <li><img src="./images/gift-05.png" /></li>
                     <li><img src="./images/gift-06.png" /></li>
                 </ul>
-                <button type="button" id="btnStartGame" class="btn btn-start-game">START</button>
+                <button type="button" id="btnStartGame" class="btn-start-game">START</button>
             </div>
         </div>
     </main>
@@ -46,10 +46,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
+                    <h1>ยินดีด้วย คุณได้รับ</h1>
                     <div class="modal-gift">
                         <img src="./images/gift-06.png" alt="gift">
                     </div>
-                    <button type="button" data-dismiss="modal" class="btn btn-submit">ยืนยัน</button>
+                    <button type="button" class="bubbly-button" data-dismiss="modal" data-toggle="modal" data-target="#indexModal">ยืนยัน</button>
                 </div>
             </div>
         </div>
@@ -62,6 +63,23 @@
     <script src="./js/jquery.jSlots.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" charset="utf-8">
+        var animateButton = function (e) {
+
+            e.preventDefault;
+            //reset animation
+            e.target.classList.remove('animate');
+
+            e.target.classList.add('animate');
+            setTimeout(function () {
+                e.target.classList.remove('animate');
+            }, 700);
+        };
+
+        var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+        for (var i = 0; i < bubblyButtons.length; i++) {
+            bubblyButtons[i].addEventListener('click', animateButton, false);
+        }
         // Modal
         $('#indexModal').modal('show');
         // normal example
