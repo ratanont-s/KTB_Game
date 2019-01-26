@@ -1,15 +1,21 @@
 body {
+    @include gradient-y($start-color: darken($primary, 10%), $end-color: darken($primary, 20%), $start-percent: 0%, $end-percent: 100%);
+}
+
+main {
     min-height: 100vh;
-    padding: 1.5rem 0;
-    @include gradient-y($start-color: #24A4DE, $end-color: darken(#24A4DE, 10%), $start-percent: 0%, $end-percent: 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding-top: 10rem;
 }
 
 .img-logo {
     width: 50vw;
     display: block;
+
+    &-small {
+        width: 20vw;
+        margin-bottom: 15rem;
+    }
 }
 
 ul {
@@ -18,13 +24,99 @@ ul {
     list-style: none;
 }
 
-.jSlots-wrapper {
-    overflow: hidden;
-    height: 100px;
-    display: inline-block;
-    border: 1px solid #999;
-}
+
 
 .slot {
-    float: left;
+    &-game {
+
+        img {
+            max-height: calc(20vh - 4rem);
+        }
+    }
+
+    .jSlots-wrapper {
+        overflow: hidden;
+        height: 20vh;
+        width: 80vw;
+        background-color: white;
+        margin: auto;
+        border-radius: 2rem;
+        box-shadow: $box-shadow-lg;
+        border: 2rem double $primary;
+    }
+}
+
+.btn {
+    &-start-game {
+        margin-top: 5rem;
+        width: 20rem;
+        height: 20rem;
+        font-size: 5rem;
+        background-color: $secondary;
+        box-shadow: $box-shadow-lg;
+        border-radius: 100%;
+        color: white;
+        font-weight: bold;
+
+        &:focus {
+            background-color: darken($secondary, 10%);
+            color: white;
+        }
+    }
+
+    &-submit {
+        font-size: 3rem;
+        width: 80%;
+        background-color: $primary;
+        border-radius: 1rem;
+        margin-top: 3rem;
+        color: white;
+        font-weight: bold;
+    }
+}
+
+#indexModal {
+    .modal {
+        &-dialog {
+            max-width: 100%;
+            margin: unset;
+        }
+
+        &-content {
+            min-height: 100vh;
+            border: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include gradient-y($start-color: $primary, $end-color: darken($primary, 10%), $start-percent: 0%, $end-percent: 100%);
+        }
+
+        &-body {
+            flex: unset;
+        }
+    }
+}
+
+#giftModal {
+    .modal {
+        &-dialog {
+            max-width: 100%;
+            margin: unset;
+        }
+
+        &-content {
+            min-height: 100vh;
+            border: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent url('../images/bg-gift.svg') no-repeat center center;
+            background-size: contain;
+        }
+
+        &-body {
+            flex: unset;
+            text-align: center;
+        }
+    }
 }
