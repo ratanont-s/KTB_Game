@@ -51,7 +51,7 @@
                     <div class="modal-gift">
                         <img src="./images/gift-06.png" alt="gift" class="animated infinite tada ">
                     </div>
-                    <button type="button" class="bubbly-button" data-dismiss="modal" data-toggle="modal" data-target="#indexModal">ยืนยัน</button>
+                    <button type="button" class="bubbly-button">ยืนยัน</button>
                 </div>
             </div>
         </div>
@@ -83,6 +83,15 @@
         }
         // Modal
         $('#indexModal').modal('show');
+        $('.bubbly-button').on('click', function (e) {
+            // do something...
+            setTimeout(function () {
+                $('#giftModal').modal('hide');
+            }, 1000);
+            setTimeout(function () {
+                $('#indexModal').modal('show');
+            }, 1500);
+        });
         // normal example
         $('.slot-game').jSlots({
             spinner: '#btnStartGame',

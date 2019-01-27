@@ -81,6 +81,8 @@ ul {
 }
 
 #indexModal {
+    padding-right: unset !important;
+
     .modal {
         &-dialog {
             max-width: 100%;
@@ -130,7 +132,7 @@ ul {
 
             h1 {
                 color: white;
-                margin-bottom: 2rem;
+                margin-bottom: 3rem;
             }
         }
 
