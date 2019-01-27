@@ -43,7 +43,7 @@
     </div>
 
     <!-- Modal Gift -->
-    <div class="modal fade" tabindex="-1" role="dialog" id="giftModal">
+    <div class="modal animated bounceIn" tabindex="-1" role="dialog" id="giftModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
@@ -51,7 +51,7 @@
                     <div class="modal-gift">
                         <img src="./images/gift-06.png" alt="gift" class="animated infinite tada ">
                     </div>
-                    <button type="button" class="bubbly-button">ยืนยัน</button>
+                    <button type="button" class="btn-submit">ยืนยัน</button>
                 </div>
             </div>
         </div>
@@ -76,14 +76,14 @@
             }, 700);
         };
 
-        var bubblyButtons = document.getElementsByClassName("bubbly-button");
+        var bubblyButtons = document.getElementsByClassName("btn-submit");
 
         for (var i = 0; i < bubblyButtons.length; i++) {
             bubblyButtons[i].addEventListener('click', animateButton, false);
         }
         // Modal
-        $('#indexModal').modal('show');
-        $('.bubbly-button').on('click', function (e) {
+        // $('#indexModal').modal('show');
+        $('.btn-submit').on('click', function (e) {
             // do something...
             setTimeout(function () {
                 $('#giftModal').modal('hide');
