@@ -130,8 +130,14 @@ ul {
 
             h1 {
                 color: white;
-                margin-bottom: 1.5rem;
+                margin-bottom: 2rem;
             }
+        }
+
+        &-gift {
+            border: .5rem solid white;
+            border-radius: 5rem;
+            box-shadow: 0 0 10rem white;
         }
     }
 }
